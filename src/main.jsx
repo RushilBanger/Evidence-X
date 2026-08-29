@@ -1,0 +1,14 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+import "./index.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+    <div className="min-h-screen text-white bg-neutral-950 bg-[radial-gradient(ellipse_80%_70%_at_50%_-35%,rgba(16,185,129,0.35),rgba(255,255,255,0))]">
+      <App /></div>
+    </BrowserRouter>
+  </React.StrictMode>
+);

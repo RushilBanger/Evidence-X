@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+.typewriter-flicker {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 2px solid #10b981;
+
+  /* Blended emerald text */
+  color: #6ee7b7;
+
+  animation:
+    typing 5s steps(18, end) forwards,
+    cursorBlink 0.8s step-end 4,
+    flickerGlow 2.2s infinite 5s;
+}
+
+/* Typewriter */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 18ch; }
+}
+
+/* Cursor */
+@keyframes cursorBlink {
+  50% { border-color: transparent; }
+  100% { border-color: transparent; }
+}
+
+/* Flicker + Smooth Emerald Glow */
+@keyframes flickerGlow {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+    color: #a7f3d0;
+    text-shadow:
+      0 0 4px rgba(167, 243, 208, 0.595),
+      0 0 10px rgba(110, 231, 183, 0.279),
+      0 0 20px rgba(52, 211, 153, 0.242),
+      0 0 40px rgba(16,185,129,0.35),
+      0 0 80px rgba(16,185,129,0.18);
+  }
+
+  /* Flicker off */
+  20%, 24%, 55% {
+    opacity: 0.35;
+    text-shadow:
+      0 0 2px rgba(16,185,129,0.15);
+  }
+
+  /* Partial flicker */
+  21%, 56% {
+    opacity: 0.75;
+    text-shadow:
+      0 0 6px rgba(110,231,183,0.6),
+      0 0 18px rgba(16,185,129,0.3),
+      0 0 40px rgba(16,185,129,0.15);
+  }
+}
+
+.evidence-flicker {
+  display: inline-block;
+
+  color: #a7f3d0;
+
+  /* Initial inner + outer glow */
+  text-shadow:
+    0 0 2px #ecfdf5,
+    0 0 5px #6ee7b7,
+    0 0 10px rgba(52, 211, 153, 0.9),
+    0 0 20px rgba(16, 185, 129, 0.55),
+    0 0 40px rgba(16, 185, 129, 0.30),
+    0 0 70px rgba(16, 185, 129, 0.15);
+
+  animation: evidenceFlicker 3.5s ease-in-out infinite;
+}
+
+
+/* Smooth ambulance/neon flicker */
+@keyframes evidenceFlicker {
+
+  /* Normal bright */
+  0% {
+    opacity: 1;
+
+    text-shadow:
+      0 0 2px #ecfdf5,
+      0 0 5px #6ee7b7,
+      0 0 10px rgba(52, 211, 153, 0.9),
+      0 0 20px rgba(16, 185, 129, 0.55),
+      0 0 40px rgba(16, 185, 129, 0.30),
+      0 0 70px rgba(16, 185, 129, 0.15);
+  }
+
+  /* Gradually dim */
+  25% {
+    opacity: 0.80;
+
+    text-shadow:
+      0 0 2px #d1fae5,
+      0 0 4px #6ee7b7,
+      0 0 8px rgba(52, 211, 153, 0.65),
+      0 0 16px rgba(16, 185, 129, 0.38),
+      0 0 32px rgba(16, 185, 129, 0.18),
+      0 0 55px rgba(16, 185, 129, 0.08);
+  }
+
+  /* Almost dim, but inner glow remains */
+  32% {
+    opacity: 0.70;
+
+    text-shadow:
+      0 0 2px #a7f3d0,
+      0 0 4px rgba(110, 231, 183, 0.8),
+      0 0 8px rgba(52, 211, 153, 0.45),
+      0 0 16px rgba(16, 185, 129, 0.22),
+      0 0 30px rgba(16, 185, 129, 0.08);
+  }
+
+  /* Sudden recovery */
+  38% {
+    opacity: 0.90;
+
+    text-shadow:
+      0 0 2px #ecfdf5,
+      0 0 5px #6ee7b7,
+      0 0 12px rgba(52, 211, 153, 0.85),
+      0 0 24px rgba(16, 185, 129, 0.5),
+      0 0 45px rgba(16, 185, 129, 0.25),
+      0 0 75px rgba(16, 185, 129, 0.12);
+  }
+
+  /* Bright */
+  50% {
+    opacity: 1;
+
+    text-shadow:
+      0 0 2px #ecfdf5,
+      0 0 6px #6ee7b7,
+      0 0 14px rgba(52, 211, 153, 0.95),
+      0 0 28px rgba(16, 185, 129, 0.6),
+      0 0 50px rgba(16, 185, 129, 0.32),
+      0 0 80px rgba(16, 185, 129, 0.14);
+  }
+
+  /* Slow fade */
+  72% {
+    opacity: 0.85;
+
+    text-shadow:
+      0 0 2px #d1fae5,
+      0 0 5px #6ee7b7,
+      0 0 10px rgba(52, 211, 153, 0.7),
+      0 0 20px rgba(16, 185, 129, 0.4),
+      0 0 38px rgba(16, 185, 129, 0.18),
+      0 0 60px rgba(16, 185, 129, 0.08);
+  }
+
+  /* Tiny flicker */
+  76% {
+    opacity: 0.65;
+
+    text-shadow:
+      0 0 2px #a7f3d0,
+      0 0 4px rgba(110, 231, 183, 0.7),
+      0 0 8px rgba(52, 211, 153, 0.4),
+      0 0 16px rgba(16, 185, 129, 0.18),
+      0 0 28px rgba(16, 185, 129, 0.06);
+  }
+
+  /* Back to full brightness */
+  82% {
+    opacity: 0.98;
+
+    text-shadow:
+      0 0 2px #ecfdf5,
+      0 0 6px #6ee7b7,
+      0 0 12px rgba(52, 211, 153, 0.9),
+      0 0 24px rgba(16, 185, 129, 0.55),
+      0 0 45px rgba(16, 185, 129, 0.28),
+      0 0 75px rgba(16, 185, 129, 0.12);
+  }
+
+  100% {
+    opacity: 1;
+
+    text-shadow:
+      0 0 2px #ecfdf5,
+      0 0 5px #6ee7b7,
+      0 0 10px rgba(52, 211, 153, 0.9),
+      0 0 20px rgba(16, 185, 129, 0.55),
+      0 0 40px rgba(16, 185, 129, 0.30),
+      0 0 70px rgba(16, 185, 129, 0.15);
+  }
+}
+
+
+
+
+
+
+
+
+
+
